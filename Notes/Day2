@@ -1,0 +1,85 @@
+Class Notes-2
+Manual vs Automation
+Selenium
+How to setup selenium env
+IntelliJ structure
+Basic Navigation
+
+======================
+1.Open intellij
+2.File-> New Project or Create New Project
+3.Choose Maven project from left menu
+Maven--> is build management tool used to creta projects, manage dependencies and run test
+4.Project SDK please choose one of the Java version, 8,11,12
+5.Click next and we will see group id screen
+GroupId: com.cybertek
+ArtifactID: Summer2019EuropeTestNGProject
+Version: leave it as it is
+6.Click next
+7.Click Finish
+8.(Click This windows if you see that pop-op)
+9.Click Enable-Auto Import right bottom of the screen
+
+
+pom.xml --> brain of the maven, most important file for maven, manages everthing like dependecies, plugins etc.
+===================================
+Setting up packages
+1.Left side of the screen, click src --> test--> java
+2.Right click Java; New-> Package
+3.Package name: com.cybertek.tests
+
+***If you have problem with viewing packages, click the gear icon on the top and make sure first two options are not checked
+
+Creating java class
+1.Right click the tests folder under the cybertek package
+2.Name it FirstClass and click enter
+
+Option + Enter MAC--> import class
+ALT + Enter WIN --> import class
+or Ctrl + Space
+
+Right click tests folder
+new -> package
+name is
+com.cybertek.tests.day1_basic_navigation
+
+================================================
+Summer2019EuropeTestNGProject--> name of the project
+
+.idea --> specific to intellij only.intellij keeps some settings here.leave it alone
+
+target--> this folder is created by maven used to keep compiled classes,report etc. leave it alone
+
+pom.xml --> brain of the maven, most important file for maven, manages everthing like dependecies, plugins etc.
+
+src --> all the code goes here
+main--> application code comes here
+java--> for java code
+resources--> used for application data
+test-->test code is written here
+java--> java test code
+
+com.cybertek --> all project use the company/prject anmes for package name. Name goes in the reverse order of the domain
+=============================
+1.We need to setup one maven project
+2.and we need to and two selenium dependencies to pom.xml
+<dependency>
+<groupId>org.seleniumhq.selenium</groupId>
+<artifactId>selenium-java</artifactId>
+<version>3.141.59</version>
+</dependency>
+
+<dependency>
+<groupId>io.github.bonigarcia</groupId>
+<artifactId>webdrivermanager</artifactId>
+<version>3.7.1</version>
+</dependency>
+3.
+//we have to setup webdriver based on the browser that we gonna use
+WebDriverManager.chromedriver().setup();
+
+4. //creating object for using selenium driver
+WebDriver driver= new ChromeDriver();
+
+5.Open the website
+driver.get(url)

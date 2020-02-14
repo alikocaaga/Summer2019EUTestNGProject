@@ -1,0 +1,72 @@
+CLASS NOTES
+Today topic
+browser navigation
+getDriver methods
+push to code the GitHub
+=====================
+Every class we will create new package under the tests folder
+1.Right click tests
+2.New->Package
+3.day2_webdriver_basics
+
+new class under the that day package
+1.right click day2_webdriver_basics
+2.new-->class--> NavigationDemo
+
+Thread.sleep(3000); --> stops your code based on miliseconds
+==================
+driver.get--> navigates to browser, openning website
+driver.nagivate().to()-->navigates to website also
+difference between get and navigateTo
+driver.get waits until page fully loaded navigate to doesn't wait
+
+driver.navigate().back()-->click back button on the browser
+driver.navigate().forward()-->click forward button on the browser
+driver.navigate().refresh()-->refresh the webpage
+========================
+when we create the new class for automation
+1.Create the main method
+2.setup your browser with WebDriverManager
+3.create your driver object
+***ready to automate browser
+
+driver.close()-->closes current tab
+driver.quit()-->closes browsers everything, clear the memory
+========================
+utility class--> this class is not have test, it will have reusable piece of code that is frequently used by tests
+utilities--> package we store utility classes
+Create a new package
+1.right click on cybertek
+new-> package
+name:utilities
+OK
+
+Create WebDriverFactory class
+1.Right click utilities
+new->class
+name: WebDriverFactory
+OK
+
+factory --> class that returns certian type of object based on inputs
+
+Create a class under the tests package
+name: CallWebDriverFactory
+========================================
+Git repo part
+1.Right click the project name Summer2019.....
+2.Reveal in Finder / Show in explorer
+3.Open terminal/cmd/powershell
+4.put cd and space then drag and drop the folder to terminal/cmd/powershell
+5.git init
+6.git status
+7.git add pom.xml
+8.git add src
+9.git commit -m "first commit"
+10.go to github.com login
+11.create new repository with the name of : Summer2019EuropeTestNGProject
+12.get the two lines …or push an existing repository from the command line
+and hit enter
+
+13.refresh your github page
+
+git is not pushing empty folder
