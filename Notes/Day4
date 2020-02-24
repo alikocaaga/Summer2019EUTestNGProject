@@ -1,0 +1,52 @@
+Class Notes-3
+Once you get the test case, what do you do first
+1.Read and try to understand
+2.Manually execute test case
+- functionallity shoulnt be broken
+- it should be automatable with selenium,(color design etc)
+- should pass manually first
+=================================
+Create day3_webelement_intro package under tests folder
+Create VerifyURLnotchanged class under day3 package
+1.I created main method
+2.Copy test steps to class
+
+How to read error message
+1.Go to end of the error
+2.Click the blue link to see which line caused error
+3.Find exception keyword and read the error message.
+
+How to commit and push from intellij
+1.click green check button right top corner from git menu
+2.type commit message
+3.click down arrow dropdown next to commit
+4.click commit and push
+5.click push -> if it asked username and password, pass your github info
+6.check your repo
+
+how to add files through intellij
+1.if it is red color, means you haven't add to git
+2. right click, git, add
+then follow commit and push steps
+
+
+Test Cases
+
+Verify URL not changed
+open browser
+go to http://practice.cybertekschool.com/forgot_passwordLinks to an external site.
+click on Retrieve password
+verify that url did not change
+Verify URL changed
+open browser
+go to http://practice.cybertekschool.com/forgot_passwordLinks to an external site.
+enter any email
+click on Retrieve password
+verify that url changed to http://practice.cybertekschool.com/email_sent
+Verify confirmation message
+open browser
+go to http://practice.cybertekschool.com/forgot_passwordLinks to an external site.
+enter any email
+verify that email is displayed in the input box
+click on Retrieve password
+verify that confirmation message says 'Your e-mail's been sent!'

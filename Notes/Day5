@@ -1,0 +1,81 @@
+Class Notes-4
+Locators
+Selenium read webpage as a source code,
+selenium knows how to read html code.
+
+Selenium uses locators to locate different webelements
+
+driver--> our page, browser
+
+findElement()--> method used to find element on the webpage
+
+locators--> methods, means, intruments of finding elements on the page
+
+Find Element menthod takes By object as an argument.
+
+By is a name of class for locators.
+
+8 different types of locators
+id
+name
+classname
+tagname
+linktext
+partiallinktext
+xpath
+css
+==================================
+How to identify Elements ?
+1.Navigate to applicaiton ( go to website )
+2.Open the source code, inspect element, (right click, inspect)
+3.Find the unique property for the element (8 locators)
+======================
+1.Right click tests
+2.Create - new package ->com.cybertek.tests.day4_basic_locators
+Create class under it -> IdLocatorTest
+=======================
+ID--> first locator, if there is id we will choose it most of the time, because it is unique.
+
+*** id is unique but it might be dynamic so make sure it is not changing before use it.
+
+if findElement() does two things
+if element found with given locator--> returns the WebElement
+if element NOT found with given locator-->NoSuchElementException
+=====================
+Name: if there is no id,we use name locator
+name locator might be duplicate(radioButtons) be careful.
+name is not dynamic %99.9 of the time.
+============
+TagName:we can use html tag to locate element
+<input type="text" name="full_name">
+input --> tag of the element
+rest is attribute and value
+
+Selenium reads the source code from top to bottom.
+if your locators matched with one webelement, selenium stops there.
+
+***if you want to search something in the inspect page, click ctrl/cmd + F
+
+if there is no id or name, we can use tagname based on two conditions
+1.tag should be used only one time OR
+2.you want to point first matching tag web element
+
+we cannot use index when we use tagname.If there are multiple usage of same tag, we cannot point second one.
+
+=================
+className: another attribute for location elements
+We will use it later to locate multiple elements in one shot.
+
+when we shouln't use classname locator ?
+if there is a space in the class attribute value, we CANNOT use it.
+=====================
+linktext and partiallinktext
+linktext -->using full text of link to locate link webelement on the webpage
+partiallinktext--> using part of the linktext to locate link webelement
+
+
+How to create new project in intellij
+File-New-project
+
+How to switch between projects
+File-->open recent
