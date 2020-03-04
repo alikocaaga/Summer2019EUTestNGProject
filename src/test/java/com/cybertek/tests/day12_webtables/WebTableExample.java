@@ -2,7 +2,10 @@ package com.cybertek.tests.day12_webtables;
 
 import com.cybertek.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
+<<<<<<< HEAD
 import org.openqa.selenium.Keys;
+=======
+>>>>>>> Summer2019EUTestNGProject/master
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -125,6 +128,7 @@ public class WebTableExample {
         List<WebElement> allColumns = driver.findElements(By.xpath("//table[@id='table1']//th"));
         return allColumns.size();
     }
+<<<<<<< HEAD
 
     @Test
     public void StaleTest(){
@@ -135,4 +139,6 @@ public class WebTableExample {
         WebElement results = driver.findElement(By.id("resultStats"));
         Assert.assertTrue(results.isDisplayed());
     }
+=======
+>>>>>>> Summer2019EUTestNGProject/master
 }
