@@ -2,6 +2,7 @@ package com.cybertek.tests.day12_webtables;
 
 import com.cybertek.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -123,5 +124,15 @@ public class WebTableExample {
     private int getNumberOfColumns (){
         List<WebElement> allColumns = driver.findElements(By.xpath("//table[@id='table1']//th"));
         return allColumns.size();
+    }
+
+    @Test
+    public void StaleTest(){
+        driver.get("http://google.com");
+        WebElement input = driver.findElement(By.name("q"));
+        input.sendKeys("Kocaaga" + Keys.ENTER);
+
+        WebElement results = driver.findElement(By.id("resultStats"));
+        Assert.assertTrue(results.isDisplayed());
     }
 }
