@@ -22,9 +22,5 @@ public class XpathTest {
         WebElement xdrf = driver.findElement(By.xpath("/html/body/div/div/div/div/p"));
         System.out.println(xdrf.getText());
 
-
-
-
-
     }
 }
